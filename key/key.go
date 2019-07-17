@@ -7,7 +7,6 @@ import (
 	"errors"
 	"fmt"
 	"github.com/ethereum/go-ethereum/crypto/secp256k1"
-	"github.com/ethereum/go-ethereum/rlp"
 	"golang.org/x/crypto/sha3"
 	"io"
 	"math/big"
@@ -32,8 +31,6 @@ const (
 )
 
 type Address [AddressLength]byte
-type Hash [HashLength]byte
-func (h Hash) Bytes() []byte { return h[:] }
 
 func (a *Address) SetBytes(b []byte) {
 	if len(b) > len(a) {
@@ -68,8 +65,6 @@ type Key struct {
 	Address Address
 	PrivateKey *ecdsa.PrivateKey
 }
-
-
 
 func ReadBits(bigint *big.Int, buf []byte) {
 	i := len(buf)
@@ -181,7 +176,6 @@ func newKey(rand io.Reader) (*Key, error) {
 	return newKeyFromECDSA(privateKeyECDSA), nil
 }
 
-
 func CreateKey()(string,string,error){
 	 key,err := newKey(crand.Reader)
 	 if err != nil {
@@ -222,12 +216,8 @@ func zeroBytes(bytes []byte) {
 }
 
 func SignInfo(signstr string,pri string)([]byte,error){
-
-	h := rlpHash([]interface{}{
-		signstr,
-	})
-	hashstr := hex.EncodeToString(h.Bytes())
-	print(hashstr)
+	h := sha3.Sum256([]byte(signstr))
+	fmt.Println(hex.EncodeToString(h[:]))
 	key , err := GetKeyFromPri(pri)
 	if err != nil {
 		return nil, err
@@ -237,14 +227,6 @@ func SignInfo(signstr string,pri string)([]byte,error){
 		return nil, err
 	}
 	return sig,nil
-}
-
-
-func rlpHash(x interface{}) (h Hash) {
-	hw := sha3.NewLegacyKeccak256()
-	rlp.Encode(hw, x)
-	hw.Sum(h[:0])
-	return h
 }
 
 // Ecrecover returns the uncompressed public key that created the given signature.
@@ -258,22 +240,18 @@ func SigToPub(hash, sig []byte) (*ecdsa.PublicKey, error) {
 	if err != nil {
 		return nil, err
 	}
-
 	x, y := elliptic.Unmarshal(S256(), s)
 	return &ecdsa.PublicKey{Curve: S256(), X: x, Y: y}, nil
 }
 
 
 func SignToAddress(signstr string , signedstr string)(string,error){
-	h := rlpHash([]interface{}{
-		signstr,
-	})
+	h := sha3.Sum256([]byte(signstr))
 	sig ,_:= hex.DecodeString(signedstr)
-	pub , err :=  SigToPub(h.Bytes(),sig)
+	pub , err :=  SigToPub(h[:],sig)
 	if err != nil {
 		return "",err
 	}
-
 	pubBytes := FromECDSAPub(pub)
 	return BytesToAddress(Keccak256(pubBytes[1:])[12:]).Hex(),nil
 }

@@ -4,6 +4,11 @@
 
 package sha3
 
+//import (
+//	"encoding/hex"
+//	"fmt"
+//)
+
 // spongeDirection indicates the direction bytes are flowing through the sponge.
 type spongeDirection int
 
@@ -188,5 +193,6 @@ func (d *state) Sum(in []byte) []byte {
 	dup := d.clone()
 	hash := make([]byte, dup.outputLen)
 	dup.Read(hash)
+	//fmt.Println(hex.EncodeToString(hash))
 	return append(in, hash...)
 }

@@ -3,6 +3,19 @@
   <component name="ChangeListManager">
     <list default="true" id="539741fc-64c6-4814-b938-0d642752dd6e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/key/key.go" beforeDir="false" afterPath="$PROJECT_DIR$/key/key.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/key/key_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/key/key_test.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/ethereum/go-ethereum/rlp/decode.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/ethereum/go-ethereum/rlp/decode_tail_test.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/ethereum/go-ethereum/rlp/decode_test.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/ethereum/go-ethereum/rlp/doc.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/ethereum/go-ethereum/rlp/encode.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/ethereum/go-ethereum/rlp/encode_test.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/ethereum/go-ethereum/rlp/encoder_example_test.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/ethereum/go-ethereum/rlp/raw.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/ethereum/go-ethereum/rlp/raw_test.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/ethereum/go-ethereum/rlp/typecache.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/golang.org/x/crypto/sha3/sha3.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/golang.org/x/crypto/sha3/sha3.go" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -11,7 +24,26 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/key/key_test.go">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="240">
+              <caret line="40" column="6" selection-start-line="40" selection-start-column="6" selection-end-line="40" selection-end-column="6" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/vendor/golang.org/x/crypto/sha3/sha3.go">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="264">
+              <caret line="11" column="11" lean-forward="true" selection-start-line="11" selection-start-column="11" selection-end-line="11" selection-end-column="11" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -22,13 +54,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>GetMsp</find>
-      <find>CommonName</find>
-      <find>SignRequest</find>
-      <find>CompositeIndexName</find>
-      <find>shim.S</find>
-      <find>shim.E</find>
-      <find>SendScuess</find>
       <find>CreateCompositeKey</find>
       <find>model.Account</find>
       <find>&quot;token&quot;</find>
@@ -36,8 +61,6 @@
       <find>CreateAddress</find>
       <find>MarshalJSON</find>
       <find>FromECDSA</find>
-      <find>ReadBits</find>
-      <find>wordBytes</find>
       <find>CryptoJSON</find>
       <find>PubkeyToAddress</find>
       <find>math</find>
@@ -52,10 +75,20 @@
       <find>FloatAdd</find>
       <find>FloatSub</find>
       <find>+</find>
+      <find>rlpHash</find>
+      <find>append</find>
+      <find>Sum</find>
+      <find>typeinfo</find>
+      <find>writeString</find>
+      <find>Ecrecover</find>
+      <find>zeroBytes</find>
+      <find>wordBytes</find>
+      <find>ReadBits</find>
     </findStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$/../github.com/ethereum/go-ethereum/rlp</dir>
       <dir>$PROJECT_DIR$</dir>
+      <dir>$PROJECT_DIR$/vendor/golang.org/x/crypto/sha3</dir>
     </dirStrings>
   </component>
   <component name="GOROOT" path="/usr/lib/go-1.10" />
@@ -76,8 +109,10 @@
         <option value="$PROJECT_DIR$/services/ledger.go" />
         <option value="$PROJECT_DIR$/common/utils.go" />
         <option value="$PROJECT_DIR$/model/model.go" />
-        <option value="$PROJECT_DIR$/key/key_test.go" />
+        <option value="$PROJECT_DIR$/vendor/golang.org/x/crypto/sha3/sha3.go" />
         <option value="$PROJECT_DIR$/key/key.go" />
+        <option value="$PROJECT_DIR$/key/key_test.go" />
+        <option value="$PROJECT_DIR$/vendor/github.com/ethereum/go-ethereum/rlp/encode.go" />
       </list>
     </option>
   </component>
@@ -100,6 +135,51 @@
               <item name="ledger" type="b2602c69:ProjectViewProjectNode" />
               <item name="ledger" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="ledger" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ledger" type="462c0819:PsiDirectoryNode" />
+              <item name="key" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ledger" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ledger" type="462c0819:PsiDirectoryNode" />
+              <item name="services" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ledger" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ledger" type="462c0819:PsiDirectoryNode" />
+              <item name="vendor" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ledger" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ledger" type="462c0819:PsiDirectoryNode" />
+              <item name="vendor" type="462c0819:PsiDirectoryNode" />
+              <item name="github.com" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ledger" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ledger" type="462c0819:PsiDirectoryNode" />
+              <item name="vendor" type="462c0819:PsiDirectoryNode" />
+              <item name="github.com" type="462c0819:PsiDirectoryNode" />
+              <item name="ethereum" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ledger" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ledger" type="462c0819:PsiDirectoryNode" />
+              <item name="vendor" type="462c0819:PsiDirectoryNode" />
+              <item name="github.com" type="462c0819:PsiDirectoryNode" />
+              <item name="ethereum" type="462c0819:PsiDirectoryNode" />
+              <item name="go-ethereum" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ledger" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ledger" type="462c0819:PsiDirectoryNode" />
+              <item name="vendor" type="462c0819:PsiDirectoryNode" />
+              <item name="github.com" type="462c0819:PsiDirectoryNode" />
+              <item name="ethereum" type="462c0819:PsiDirectoryNode" />
+              <item name="go-ethereum" type="462c0819:PsiDirectoryNode" />
+              <item name="crypto" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -115,6 +195,12 @@
     <property name="go.sdk.automatically.set" value="true" />
     <property name="go.vendoring.notification.had.been.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../frontend4chain1.4" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -132,7 +218,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Go Test.TestSignInfo in ledger/key">
+  <component name="RunManager" selected="Go Test.TestSigToPub in ledger/key">
     <configuration name="TestCreateKey in ledger/key" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
       <module name="ledger" />
       <working_directory value="$PROJECT_DIR$/key" />
@@ -179,43 +265,43 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Go Test.TestSignInfo in ledger/key" />
-        <item itemvalue="Go Test.TestCreateKey in ledger/key" />
         <item itemvalue="Go Test.TestSigToPub in ledger/key" />
+        <item itemvalue="Go Test.TestSignInfo in ledger/key" />
         <item itemvalue="Go Test.TestGetAddFromPri in ledger/key" />
+        <item itemvalue="Go Test.TestCreateKey in ledger/key" />
       </list>
     </recent_temporary>
   </component>
   <component name="TestHistory">
-    <history-entry file="TestSignInfo_in_ledger_key - 2019.06.26 at 01h 14m 12s.xml">
+    <history-entry file="TestSigToPub_in_ledger_key - 2019.07.16 at 18h 48m 29s.xml">
+      <configuration name="TestSigToPub in ledger/key" configurationId="GoTestRunConfiguration" />
+    </history-entry>
+    <history-entry file="TestSignInfo_in_ledger_key - 2019.07.16 at 18h 51m 23s.xml">
       <configuration name="TestSignInfo in ledger/key" configurationId="GoTestRunConfiguration" />
     </history-entry>
-    <history-entry file="TestSignInfo_in_ledger_key - 2019.06.26 at 01h 51m 28s.xml">
+    <history-entry file="TestSigToPub_in_ledger_key - 2019.07.16 at 18h 51m 28s.xml">
+      <configuration name="TestSigToPub in ledger/key" configurationId="GoTestRunConfiguration" />
+    </history-entry>
+    <history-entry file="TestCreateKey_in_ledger_key - 2019.07.16 at 19h 16m 28s.xml">
+      <configuration name="TestCreateKey in ledger/key" configurationId="GoTestRunConfiguration" />
+    </history-entry>
+    <history-entry file="TestSignInfo_in_ledger_key - 2019.07.16 at 19h 34m 01s.xml">
       <configuration name="TestSignInfo in ledger/key" configurationId="GoTestRunConfiguration" />
     </history-entry>
-    <history-entry file="TestSignInfo_in_ledger_key - 2019.06.26 at 02h 29m 24s.xml">
+    <history-entry file="TestGetAddFromPri_in_ledger_key - 2019.07.16 at 19h 42m 00s.xml">
+      <configuration name="TestGetAddFromPri in ledger/key" configurationId="GoTestRunConfiguration" />
+    </history-entry>
+    <history-entry file="TestSignInfo_in_ledger_key - 2019.07.16 at 19h 48m 08s.xml">
       <configuration name="TestSignInfo in ledger/key" configurationId="GoTestRunConfiguration" />
     </history-entry>
-    <history-entry file="TestSignInfo_in_ledger_key - 2019.06.26 at 02h 34m 20s.xml">
+    <history-entry file="TestGetAddFromPri_in_ledger_key - 2019.07.16 at 20h 09m 17s.xml">
+      <configuration name="TestGetAddFromPri in ledger/key" configurationId="GoTestRunConfiguration" />
+    </history-entry>
+    <history-entry file="TestSignInfo_in_ledger_key - 2019.07.16 at 20h 09m 22s.xml">
       <configuration name="TestSignInfo in ledger/key" configurationId="GoTestRunConfiguration" />
     </history-entry>
-    <history-entry file="TestSignInfo_in_ledger_key - 2019.06.26 at 02h 49m 47s.xml">
-      <configuration name="TestSignInfo in ledger/key" configurationId="GoTestRunConfiguration" />
-    </history-entry>
-    <history-entry file="TestSignInfo_in_ledger_key - 2019.06.26 at 02h 51m 19s.xml">
-      <configuration name="TestSignInfo in ledger/key" configurationId="GoTestRunConfiguration" />
-    </history-entry>
-    <history-entry file="TestSignInfo_in_ledger_key - 2019.06.27 at 18h 38m 05s.xml">
-      <configuration name="TestSignInfo in ledger/key" configurationId="GoTestRunConfiguration" />
-    </history-entry>
-    <history-entry file="TestSignInfo_in_ledger_key - 2019.06.27 at 19h 27m 28s.xml">
-      <configuration name="TestSignInfo in ledger/key" configurationId="GoTestRunConfiguration" />
-    </history-entry>
-    <history-entry file="TestSignInfo_in_ledger_key - 2019.07.01 at 19h 07m 31s.xml">
-      <configuration name="TestSignInfo in ledger/key" configurationId="GoTestRunConfiguration" />
-    </history-entry>
-    <history-entry file="TestSignInfo_in_ledger_key - 2019.07.09 at 19h 06m 52s.xml">
-      <configuration name="TestSignInfo in ledger/key" configurationId="GoTestRunConfiguration" />
+    <history-entry file="TestSigToPub_in_ledger_key - 2019.07.16 at 20h 09m 26s.xml">
+      <configuration name="TestSigToPub in ledger/key" configurationId="GoTestRunConfiguration" />
     </history-entry>
   </component>
   <component name="TodoView">
@@ -229,20 +315,21 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="67" y="25" width="1853" height="1055" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.22815804" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.5271318" />
-      <window_info anchor="bottom" id="Debug" order="3" visible="true" weight="0.39977852" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.52380955" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.6057586" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32972974" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.32972974" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="9" sideWeight="0.4980523" visible="true" weight="0.41196012" />
+      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.4980523" weight="0.41196012" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5019477" side_tool="true" weight="0.41196012" />
       <window_info anchor="bottom" id="Docker" order="11" show_stripe_button="false" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -261,16 +348,6 @@
           <url>file://$PROJECT_DIR$/services/account.go</url>
           <line>365</line>
           <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
-          <url>file://$PROJECT_DIR$/key/key.go</url>
-          <line>228</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
-          <url>file://$PROJECT_DIR$/key/key.go</url>
-          <line>229</line>
-          <option name="timeStamp" value="3" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -439,38 +516,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/services/ledger.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="407">
-          <caret line="178" column="28" lean-forward="true" selection-start-line="178" selection-start-column="28" selection-end-line="178" selection-end-column="28" />
-          <folding>
-            <element signature="n#!!block;n#LedgerIssue#0" />
-            <element signature="n#!!block;n#LedgerGetBalance#0" />
-            <element signature="n#!!block;n#LedgerGetListbyAccount#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/common/constant.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="96">
-          <caret line="4" column="27" selection-start-line="4" selection-start-column="27" selection-end-line="4" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/common/utils.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="672">
-          <caret line="87" column="1" lean-forward="true" selection-start-line="87" selection-start-column="1" selection-end-line="87" selection-end-column="1" />
-          <folding>
-            <element signature="n#!!block;n#GetMspid#0" />
-            <element signature="n#!!block;n#ComMD#0" />
-            <element signature="n#!!block;n#ComputeForMD#0" />
-            <element signature="n#!!block;n#GetRight#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/services/signature.go">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="203">
@@ -482,23 +527,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="348">
           <caret line="44" selection-start-line="44" selection-end-line="50" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/key/key_test.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="864">
-          <caret line="40" column="17" selection-start-line="40" selection-start-column="17" selection-end-line="40" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="25" column="29" selection-start-line="25" selection-start-column="29" selection-end-line="25" selection-end-column="29" />
-          <folding>
-            <element signature="e#14#179#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -524,16 +552,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/key/key.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="230" column="12" selection-start-line="230" selection-start-column="12" selection-end-line="230" selection-end-column="12" />
-          <folding>
-            <element signature="n#!!block;n#Hex#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/vendor/github.com/google/uuid/node_js.go">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -541,6 +559,152 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1056">
           <caret line="82" lean-forward="true" selection-start-line="82" selection-end-line="82" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common/constant.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="96">
+          <caret line="4" column="27" selection-start-line="4" selection-start-column="20" selection-end-line="4" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common/utils.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="501">
+          <caret line="87" column="1" lean-forward="true" selection-start-line="87" selection-start-column="1" selection-end-line="87" selection-end-column="1" />
+          <folding>
+            <element signature="n#!!block;n#GetMspid#0" />
+            <element signature="n#!!block;n#ComMD#0" />
+            <element signature="n#!!block;n#ComputeForMD#0" />
+            <element signature="n#!!block;n#GetRight#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/lib/go-1.10/src/runtime/asm_amd64.s">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="169">
+          <caret line="2361" selection-start-line="2361" selection-end-line="2361" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/services/ledger.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="432">
+          <caret line="49" column="30" selection-start-line="49" selection-start-column="24" selection-end-line="49" selection-end-column="30" />
+          <folding>
+            <element signature="n#!!block;n#LedgerGetBalance#0" />
+            <element signature="n#!!block;n#LedgerGetListbyAccount#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="432">
+          <caret line="25" column="29" selection-start-line="25" selection-start-column="29" selection-end-line="25" selection-end-column="29" />
+          <folding>
+            <element signature="e#14#179#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/github.com/ethereum/go-ethereum/rlp/decode.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-24216" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/golang.org/x/crypto/sha3/hashes.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1584" />
+      </provider>
+    </entry>
+    <entry file="file:///usr/lib/go-1.10/src/builtin/builtin.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2280">
+          <caret line="133" column="11" selection-start-line="133" selection-start-column="5" selection-end-line="133" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/golang.org/x/crypto/sha3/sha3_test.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="582">
+          <caret line="455" column="22" selection-start-line="455" selection-start-column="10" selection-end-line="455" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/golang.org/x/crypto/sha3/keccakf.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-9192" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/golang.org/x/crypto/sha3/shake.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="361">
+          <caret line="67" column="27" selection-start-line="67" selection-start-column="23" selection-end-line="67" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/lib/go-1.10/src/testing/testing.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-215">
+          <caret line="781" selection-start-line="781" selection-end-line="781" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/github.com/ethereum/go-ethereum/rlp/typecache.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="493">
+          <caret line="159" column="32" lean-forward="true" selection-start-line="159" selection-start-column="28" selection-end-line="159" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/lib/go-1.10/src/hash/hash.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="529">
+          <caret line="48" column="11" selection-start-line="48" selection-start-column="5" selection-end-line="48" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/lib/go-1.10/src/crypto/ecdsa/ecdsa.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="544">
+          <caret line="97" column="17" lean-forward="true" selection-start-line="97" selection-start-column="16" selection-end-line="97" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/key/key.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="419">
+          <caret line="220" column="26" lean-forward="true" selection-start-line="220" selection-start-column="26" selection-end-line="220" selection-end-column="26" />
+          <folding>
+            <element signature="n#!!block;n#Hex#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/github.com/ethereum/go-ethereum/rlp/encode.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2406">
+          <caret line="271" column="5" selection-start-line="271" selection-start-column="5" selection-end-line="271" selection-end-column="5" />
+          <folding>
+            <element signature="e#806#860#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/golang.org/x/crypto/sha3/sha3.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="11" column="11" lean-forward="true" selection-start-line="11" selection-start-column="11" selection-end-line="11" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/key/key_test.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="40" column="6" selection-start-line="40" selection-start-column="6" selection-end-line="40" selection-end-column="6" />
         </state>
       </provider>
     </entry>
