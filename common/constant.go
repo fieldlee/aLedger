@@ -52,4 +52,10 @@ const(
 	PENDING_SIGN = "Pending"
 	SENT_SIGN 	= "Sent"
 	Failed_SIGN = "Refused"
+
+	TOKEN_INIT = "Init"
+	TOKEN_ISSUE = "Issue"
+	TOKEN_BURN	= "Burn"
+	TOKEN_BREAK = "Break"
+	TOKEN_MERGE = "Merge"
 )

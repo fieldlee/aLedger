@@ -13,6 +13,7 @@ type Token struct {
 	Type 	   string `json:"type,omitempty"`
 	Name       string `json:"name"`    // stock name, eg: "AAPL"
 	Desc       string `json:"desc"`    // description
+	Action 	   string `json:"action"`
 	Issuer	   string `json:"issuer"`
 	Amount     float64 `json:"amount"`
 	Status     bool   `json:"status"`

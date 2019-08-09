@@ -103,7 +103,7 @@ func LedgerIssue(stub shim.ChaincodeStubInterface)pb.Response{
 	}else{
 		token.Amount =  issueParam.Amount
 	}
-
+	token.Action = common.TOKEN_ISSUE
 	token.Desc = fmt.Sprintf("%s issue amount :%s",token.Name,strconv.FormatFloat(issueParam.Amount,'f',2,64))
 	tokenByted , err := json.Marshal(token)
 	if err != nil {
@@ -262,6 +262,7 @@ func LedgerBurnBalance(stub shim.ChaincodeStubInterface)pb.Response{
 		return common.SendError(common.Param_ERR,"Parameters error ,please check Parameters")
 	}
 
+
 	///// check admin
 	if !common.CheckAdminBySign(args[0],args[1]) {
 		return common.SendError(common.Param_ERR,"only admin can call this function")
@@ -315,6 +316,7 @@ func LedgerBurnBalance(stub shim.ChaincodeStubInterface)pb.Response{
 	}
 	///////////////================修改token
 	token.Amount = common.FloatSub(token.Amount,burnParam.Amount)
+	token.Action = common.TOKEN_BURN
 	token.Desc = fmt.Sprintf("%s Token burned amount :%s",token.Name,strconv.FormatFloat(burnParam.Amount,'f',2,64))
 	tokenByted , err := json.Marshal(token)
 	if err != nil {
@@ -602,8 +604,10 @@ func LedgerScale(stub shim.ChaincodeStubInterface)pb.Response  {
 	token.Amount = common.ComputeForMD(token.Amount,scaleParam.Mole,scaleParam.Deno)
 
 	if common.ComMD(scaleParam.Mole,scaleParam.Deno) > float64(1.0) {
+		token.Action = common.TOKEN_BREAK
 		token.Desc =  fmt.Sprintf("%s token break up , breake up scale %s",scaleParam.Token, strconv.FormatFloat(common.ComMD(scaleParam.Mole,scaleParam.Deno),'f',2,64) )
 	}else{
+		token.Action = common.TOKEN_MERGE
 		token.Desc =  fmt.Sprintf("%s token merge , merge scale %s",scaleParam.Token, strconv.FormatFloat(common.ComMD(scaleParam.Mole,scaleParam.Deno),'f',2,64) )
 	}
 	tokenBytes,err := json.Marshal(token)
