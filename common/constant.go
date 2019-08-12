@@ -53,7 +53,7 @@ const(
 	SENT_SIGN 	= "Sent"
 	Failed_SIGN = "Refused"
 
-	TOKEN_INIT = "Init"
+	TOKEN_INIT  = "Init"
 	TOKEN_ISSUE = "Issue"
 	TOKEN_BURN	= "Burn"
 	TOKEN_BREAK = "Break"
