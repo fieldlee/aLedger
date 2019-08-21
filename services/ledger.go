@@ -624,6 +624,7 @@ func LedgerScale(stub shim.ChaincodeStubInterface)pb.Response  {
 
 }
 
+
 func LedgerGetListbyAccount(stub shim.ChaincodeStubInterface) pb.Response{
 	_,args := stub.GetFunctionAndParameters()
 	if len(args) != 1{
