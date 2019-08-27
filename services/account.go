@@ -120,8 +120,16 @@ func AccountConfirm(stub shim.ChaincodeStubInterface)pb.Response{
 		return common.SendError(common.Param_ERR,"Parameters error ,please check Parameters")
 	}
 
-	commonName := args[0]
-	accountName := common.Trim(commonName)
+	accountStr := args[0]
+	accountParam   :=	model.AccountParam{}
+	err := json.Unmarshal([]byte(accountStr),&accountParam)
+	if err != nil {
+		log.Logger.Error("Unmarshal:",err)
+		return common.SendError(common.MARSH_ERR,err.Error())
+	}
+
+	accountName := common.Trim(accountParam.Name)
+
 	accountByte,err := stub.GetState(common.ACCOUNT_PRE + accountName)
 	if err != nil {
 		log.Logger.Error(err.Error())
@@ -135,25 +143,77 @@ func AccountConfirm(stub shim.ChaincodeStubInterface)pb.Response{
 
 	account := model.Account{}
 	if accountByte == nil {
+		account.Type = common.ACCOUNT
+		account.DidName = accountName
+		account.CommonName = accountParam.Name
+		account.MspID = common.GetMsp(stub)
+		account.Status = true
+		account.Code = accountParam.Code
+		newAccByte,err := json.Marshal(account)
+		if err != nil {
+			return common.SendError(common.MARSH_ERR,err.Error())
+		}
+		err = stub.PutState(common.ACCOUNT_PRE + account.DidName,newAccByte)
+		if err != nil {
+			log.Logger.Error(err.Error())
+			return common.SendError(common.PUTSTAT_ERR,err.Error())
+		}
+		jStr := fmt.Sprintf("{\"name\":\"%s\",\"code\":\"%s\"}",accountParam.Name,accountParam.Code)
+		return common.SendScuess(jStr)
+	}else{
+		log.Logger.Error("the common name not check, please first call check api")
+		return common.SendError(common.ACCOUNT_NOT_EXIST,"the account had created")
+	}
+}
+
+func GeneratePriKey(stub shim.ChaincodeStubInterface)pb.Response{
+	_,args := stub.GetFunctionAndParameters()
+	if len(args) != 2{
+		log.Logger.Error("Parameters error ,please check Parameters")
+		return common.SendError(common.Param_ERR,"Parameters error ,please check Parameters")
+	}
+
+	accountStr := args[0]
+	accountParam :=	model.AccountParam{}
+	err := json.Unmarshal([]byte(accountStr),&accountParam)
+	if err != nil {
+		log.Logger.Error("Unmarshal:",err)
+		return common.SendError(common.MARSH_ERR,err.Error())
+	}
+
+	accountName := common.Trim(accountParam.Name)
+	accountByte,err := stub.GetState(common.ACCOUNT_PRE + accountName)
+	if err != nil {
+		log.Logger.Error(err.Error())
+		return common.SendError(common.GETSTAT_ERR,err.Error())
+	}
+	account := model.Account{}
+	if accountByte == nil {
+		log.Logger.Error("the common name not check, please first call check api")
+		return common.SendError(common.ACCOUNT_NOT_EXIST,"the account had not created")
+	}else{
+		err = json.Unmarshal(accountByte,&account)
+		if err != nil {
+			log.Logger.Error(err.Error())
+			return common.SendError(common.MARSH_ERR,err.Error())
+		}
+		if account.Address != ""{
+			jStr := fmt.Sprintf("{\"name\":\"%s\",\"code\":\"%s\",\"desc\":\"the account had generate private key\"}",account.CommonName,account.Code)
+			return common.SendScuess(jStr)
+		}
 		// 创建address 和 privatekey
 		address,prikey , err := key.CreateKey()
 		if err != nil {
 			log.Logger.Error(err.Error())
 			return common.SendError(common.MARSH_ERR,err.Error())
 		}
-
 		///// admin set address
 		if accountName == common.Trim(common.ADMIN_Name) {
 			address = common.ADMIN_ADDRESS
 			prikey = ""
 		}
 
-		account.Type = common.ACCOUNT
-		account.DidName = accountName
-		account.CommonName = commonName
-		account.MspID = common.GetMsp(stub)
 		account.Address = common.Trim(address)
-		account.Status = true
 
 		newAccByte,err := json.Marshal(account)
 		if err != nil {
@@ -166,14 +226,12 @@ func AccountConfirm(stub shim.ChaincodeStubInterface)pb.Response{
 			return common.SendError(common.PUTSTAT_ERR,err.Error())
 		}
 
-		jStr := fmt.Sprintf("{\"name\":\"%s\",\"address\":\"%s\",\"privatekey\":\"%s\"}",commonName,address,prikey)
+		jStr := fmt.Sprintf("{\"name\":\"%s\",\"address\":\"%s\",\"private\":\"%s\"}",account.CommonName,address,prikey)
 
 		return common.SendScuess(jStr)
-	}else{
-		log.Logger.Error("the common name not check, please first call check api")
-		return common.SendError(common.ACCOUNT_NOT_EXIST,"the account had created")
 	}
 }
+
 // 查找用户
 func AccountGetByName(stub shim.ChaincodeStubInterface,didName string)(model.Account,error){
 

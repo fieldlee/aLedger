@@ -62,7 +62,7 @@ func TestGetAddFromPri(t *testing.T) {
 }
 ///{\"token\":\"hlc.t\",\"amount\":10000.0,\"from\":\"btcadmin\",\"to\":\"mmadmin\"}
 func TestSignInfo(t *testing.T) {
-	sig,err := SignInfo("{\"token\":\"MTC_1\",\"desc\":\"美美证券\"}","2e911c236ee73f4b26584cf5e48ff6f9fb9f6645ce9609f3192c6bbb6ba50566")
+	sig,err := SignInfo("{\"token\":\"mtc\",\"amount\":100.0,\"txid\":\"25e559e4d553d7aff1246fb57fa4f234ae6d2d998e011c1c954d9f6d227e8509\"}","2e911c236ee73f4b26584cf5e48ff6f9fb9f6645ce9609f3192c6bbb6ba50566")
 	if err != nil {
 		fmt.Println(err)
 	}

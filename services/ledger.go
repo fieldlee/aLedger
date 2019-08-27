@@ -262,7 +262,6 @@ func LedgerBurnBalance(stub shim.ChaincodeStubInterface)pb.Response{
 		return common.SendError(common.Param_ERR,"Parameters error ,please check Parameters")
 	}
 
-
 	///// check admin
 	if !common.CheckAdminBySign(args[0],args[1]) {
 		return common.SendError(common.Param_ERR,"only admin can call this function")

@@ -26,6 +26,8 @@ func(lcc *LedgerChainCode)Invoke(stub shim.ChaincodeStubInterface)pb.Response{
 		return services.AccountCheck(stub)
 	case "account_register":
 		return services.AccountConfirm(stub)
+	case "account_generate":
+		return services.GeneratePriKey(stub)
 	case "account_lock":
 		return services.AccountLock(stub)
 	case "account_unlock":
@@ -70,7 +72,6 @@ func(lcc *LedgerChainCode)Invoke(stub shim.ChaincodeStubInterface)pb.Response{
 		return services.SignHistory(stub)
 	case "signresp":
 		return services.SignRepsonse(stub)
-
 	default:
 		return shim.Error("function not define,please check function")
 	}

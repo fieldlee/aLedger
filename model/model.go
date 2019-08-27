@@ -1,12 +1,18 @@
 package model
 
+type AccountParam struct {
+	Name string `json:"name"`
+	Code string `json:"code"`
+}
+
 type Account struct {
 	Type       string `json:"type,omitempty"`
-	Address 	string `json:"address"`
+	Address    string `json:"address"`
 	DidName    string `json:"name"`
 	CommonName string `json:"cn"`
 	MspID      string `json:"mspid"`
-	Status 	   bool  `json:"status"`
+	Status 	   bool   `json:"status"`
+	Code 	   string `json:"code"`
 }
 
 type Token struct {
