@@ -4,10 +4,7 @@
     <list default="true" id="539741fc-64c6-4814-b938-0d642752dd6e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/key/key_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/key/key_test.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/main.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/model.go" beforeDir="false" afterPath="$PROJECT_DIR$/model/model.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/services/account.go" beforeDir="false" afterPath="$PROJECT_DIR$/services/account.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/ledger.go" beforeDir="false" afterPath="$PROJECT_DIR$/services/ledger.go" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -16,30 +13,33 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
+    <leaf>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/services/ledger.go">
+        <entry file="file://$PROJECT_DIR$/key/key.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="526">
-              <caret line="31" column="4" lean-forward="true" selection-start-line="31" selection-start-column="4" selection-end-line="36" selection-end-column="5" />
-              <folding>
-                <element signature="e#18#258#0" expanded="true" />
-                <element signature="n#!!block;n#LedgerGetBalance#0" />
-                <element signature="n#!!block;n#LedgerGetHistory#0" />
-                <element signature="n#!!block;n#LedgerBurnBalance#0" />
-                <element signature="n#!!block;n#LedgerTransfer#0" />
-                <element signature="n#!!block;n#LedgerScale#0" />
-                <element signature="n#!!block;n#LedgerGetListbyAccount#0" />
-              </folding>
+            <state relative-caret-position="648">
+              <caret line="42" column="45" lean-forward="true" selection-start-line="42" selection-start-column="21" selection-end-line="42" selection-end-column="45" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/main.go">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="610">
+              <caret line="29" column="30" selection-start-line="29" selection-start-column="30" selection-end-line="29" selection-end-column="30" />
+              <folding>
+                <element signature="e#14#179#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/services/account.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="264">
-              <caret line="114" column="19" selection-start-line="114" selection-start-column="5" selection-end-line="114" selection-end-column="19" />
+            <state relative-caret-position="320">
+              <caret line="170" column="21" selection-start-line="170" selection-start-column="21" selection-end-line="170" selection-end-column="21" />
               <folding>
                 <element signature="e#18#242#0" expanded="true" />
                 <element signature="n#!!block;n#AccountCheck#0" />
@@ -58,19 +58,16 @@
         <entry file="file://$PROJECT_DIR$/model/model.go">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="48">
-              <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
+              <caret line="2" column="5" selection-start-line="2" selection-start-column="5" selection-end-line="2" selection-end-column="5" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/main.go">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/key/key_test.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="338">
-              <caret line="73" column="42" selection-start-line="73" selection-start-column="42" selection-end-line="73" selection-end-column="42" />
-              <folding>
-                <element signature="e#14#179#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="304">
+              <caret line="64" column="68" selection-start-line="64" selection-start-column="68" selection-end-line="64" selection-end-column="68" />
             </state>
           </provider>
         </entry>
@@ -141,10 +138,10 @@
         <option value="$PROJECT_DIR$/common/constant.go" />
         <option value="$PROJECT_DIR$/key/key.go" />
         <option value="$PROJECT_DIR$/services/ledger.go" />
-        <option value="$PROJECT_DIR$/key/key_test.go" />
         <option value="$PROJECT_DIR$/model/model.go" />
-        <option value="$PROJECT_DIR$/services/account.go" />
         <option value="$PROJECT_DIR$/main.go" />
+        <option value="$PROJECT_DIR$/key/key_test.go" />
+        <option value="$PROJECT_DIR$/services/account.go" />
       </list>
     </option>
   </component>
@@ -159,7 +156,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -170,17 +166,13 @@
             <path>
               <item name="ledger" type="b2602c69:ProjectViewProjectNode" />
               <item name="ledger" type="462c0819:PsiDirectoryNode" />
-              <item name="model" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ledger" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ledger" type="462c0819:PsiDirectoryNode" />
-              <item name="services" type="462c0819:PsiDirectoryNode" />
+              <item name="key" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -282,9 +274,6 @@
     </recent_temporary>
   </component>
   <component name="TestHistory">
-    <history-entry file="TestAddress_Hex_in_ledger_key - 2019.07.17 at 00h 57m 20s.xml">
-      <configuration name="TestAddress_Hex in ledger/key" configurationId="GoTestRunConfiguration" />
-    </history-entry>
     <history-entry file="TestAddress_Hex_in_ledger_key - 2019.07.17 at 01h 00m 26s.xml">
       <configuration name="TestAddress_Hex in ledger/key" configurationId="GoTestRunConfiguration" />
     </history-entry>
@@ -312,6 +301,9 @@
     <history-entry file="TestSignInfo_in_ledger_key - 2019.08.21 at 22h 44m 49s.xml">
       <configuration name="TestSignInfo in ledger/key" configurationId="GoTestRunConfiguration" />
     </history-entry>
+    <history-entry file="TestSignInfo_in_ledger_key - 2019.08.27 at 23h 57m 55s.xml">
+      <configuration name="TestSignInfo in ledger/key" configurationId="GoTestRunConfiguration" />
+    </history-entry>
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -326,7 +318,7 @@
     <frame x="67" y="25" width="1853" height="1055" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15762997" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.16042481" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -338,7 +330,7 @@
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32972974" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.32972974" />
-      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.4980523" weight="0.41394827" />
+      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.4980523" weight="0.416198" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5019477" side_tool="true" weight="0.41196012" />
       <window_info anchor="bottom" id="Docker" order="11" show_stripe_button="false" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -600,34 +592,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/key/key.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="582">
-          <caret line="253" column="5" lean-forward="true" selection-start-line="253" selection-start-column="5" selection-end-line="253" selection-end-column="5" />
-          <folding>
-            <element signature="n#!!block;n#Hex#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/key/key_test.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="117">
-          <caret line="64" column="139" selection-start-line="64" selection-start-column="139" selection-end-line="64" selection-end-column="139" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/sync.sh">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
           <caret line="5" column="4" lean-forward="true" selection-start-line="5" selection-start-column="4" selection-end-line="5" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/model/model.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="48">
-          <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
         </state>
       </provider>
     </entry>
@@ -647,10 +615,41 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/model/model.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="48">
+          <caret line="2" column="5" selection-start-line="2" selection-start-column="5" selection-end-line="2" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/key/key_test.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="64" column="68" selection-start-line="64" selection-start-column="68" selection-end-line="64" selection-end-column="68" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/key/key.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="648">
+          <caret line="42" column="45" lean-forward="true" selection-start-line="42" selection-start-column="21" selection-end-line="42" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="610">
+          <caret line="29" column="30" selection-start-line="29" selection-start-column="30" selection-end-line="29" selection-end-column="30" />
+          <folding>
+            <element signature="e#14#179#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/services/account.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="114" column="19" selection-start-line="114" selection-start-column="5" selection-end-line="114" selection-end-column="19" />
+        <state relative-caret-position="320">
+          <caret line="170" column="21" selection-start-line="170" selection-start-column="21" selection-end-line="170" selection-end-column="21" />
           <folding>
             <element signature="e#18#242#0" expanded="true" />
             <element signature="n#!!block;n#AccountCheck#0" />
@@ -660,16 +659,6 @@
             <element signature="n#!!block;n#AccountGetHistory#0" />
             <element signature="n#!!block;n#AccountGet#0" />
             <element signature="n#!!block;n#AccountGetAll#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="338">
-          <caret line="73" column="42" selection-start-line="73" selection-start-column="42" selection-end-line="73" selection-end-column="42" />
-          <folding>
-            <element signature="e#14#179#0" expanded="true" />
           </folding>
         </state>
       </provider>

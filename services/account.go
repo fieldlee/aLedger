@@ -168,7 +168,7 @@ func AccountConfirm(stub shim.ChaincodeStubInterface)pb.Response{
 
 func GeneratePriKey(stub shim.ChaincodeStubInterface)pb.Response{
 	_,args := stub.GetFunctionAndParameters()
-	if len(args) != 2{
+	if len(args) != 1{
 		log.Logger.Error("Parameters error ,please check Parameters")
 		return common.SendError(common.Param_ERR,"Parameters error ,please check Parameters")
 	}
