@@ -120,8 +120,8 @@ func AccountConfirm(stub shim.ChaincodeStubInterface)pb.Response{
 		return common.SendError(common.Param_ERR,"Parameters error ,please check Parameters")
 	}
 
-	accountStr := args[0]
-	accountParam   :=	model.AccountParam{}
+	accountStr    := args[0]
+	accountParam  := model.AccountParam{}
 	err := json.Unmarshal([]byte(accountStr),&accountParam)
 	if err != nil {
 		log.Logger.Error("Unmarshal:",err)
@@ -129,11 +129,14 @@ func AccountConfirm(stub shim.ChaincodeStubInterface)pb.Response{
 	}
 
 	accountName := common.Trim(accountParam.Name)
-
 	accountByte,err := stub.GetState(common.ACCOUNT_PRE + accountName)
 	if err != nil {
 		log.Logger.Error(err.Error())
 		return common.SendError(common.GETSTAT_ERR,err.Error())
+	}
+
+	if !common.CheckDigitLetter(accountParam.Code){
+		return common.SendError(common.Param_ERR,"the code must include letter and digit")
 	}
 
 	///// check admin
@@ -198,7 +201,7 @@ func GeneratePriKey(stub shim.ChaincodeStubInterface)pb.Response{
 			return common.SendError(common.MARSH_ERR,err.Error())
 		}
 		if account.Address != ""{
-			jStr := fmt.Sprintf("{\"name\":\"%s\",\"code\":\"%s\",\"desc\":\"the account had generate private key\"}",account.CommonName,account.Code)
+			jStr := fmt.Sprintf("{\"name\":\"%s\",\"code\":\"%s\",\"address\":\"%s\",\"status\":false,\"desc\":\"the account had generate private key\"}",account.CommonName,account.Code,account.Address)
 			return common.SendScuess(jStr)
 		}
 		// 创建address 和 privatekey
@@ -226,7 +229,7 @@ func GeneratePriKey(stub shim.ChaincodeStubInterface)pb.Response{
 			return common.SendError(common.PUTSTAT_ERR,err.Error())
 		}
 
-		jStr := fmt.Sprintf("{\"name\":\"%s\",\"address\":\"%s\",\"private\":\"%s\"}",account.CommonName,address,prikey)
+		jStr := fmt.Sprintf("{\"name\":\"%s\",\"code\":\"%s\",\"address\":\"%s\",\"status\":true,\"private\":\"%s\"}",account.CommonName,account.Code,address,prikey)
 
 		return common.SendScuess(jStr)
 	}

@@ -12,6 +12,7 @@ import (
 	"math/big"
 	"strconv"
 	"strings"
+	"unicode"
 )
 
 
@@ -210,6 +211,24 @@ func CheckAdminBySign(sign , signed string) (bool) {
 		return true
 	}
 	return false
+}
+
+func CheckDigitLetter(codestr string) bool{
+	hasDigit := false
+	hasLetter := false
+	for _,v := range codestr {
+		if unicode.IsDigit(v){
+			hasDigit = true
+		}
+		if unicode.IsLetter(v){
+			hasLetter = true
+		}
+	}
+
+	if hasLetter && hasDigit {
+		return true
+	}
+	return  false
 }
 
 func CheckUserEnable(stub shim.ChaincodeStubInterface)(bool){
