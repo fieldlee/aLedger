@@ -30,7 +30,7 @@ func TestGetAddFromPri(t *testing.T) {
 
 ///{\"token\":\"hlc.t\",\"amount\":10000.0,\"from\":\"btcadmin\",\"to\":\"mmadmin\"}
 func TestSignInfo(t *testing.T) {
-	sig,err := SignInfo("{\"name\":\"lisi\",\"code\":\"M98765\"}","2e911c236ee73f4b26584cf5e48ff6f9fb9f6645ce9609f3192c6bbb6ba50566")
+	sig,err := SignInfo("{\"token\":\"usaapl.t\",\"amount\":100000.0}","2e911c236ee73f4b26584cf5e48ff6f9fb9f6645ce9609f3192c6bbb6ba50566")
 	if err != nil {
 		fmt.Println(err)
 	}
